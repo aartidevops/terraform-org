@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "rg" {
   name     = "RG"
-  location = "Southeast Asia"
+  location = "ukwest"
 }
 
 resource "azurerm_virtual_network" "vnet" {
@@ -82,7 +82,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   name                            = "workstation"
   resource_group_name             = azurerm_resource_group.rg.name
   location                        = azurerm_resource_group.rg.location
-  size                            = "Standard_DS1_v2"
+  size                            = "Standard_B4ms"
   admin_username                  = "Aarti"
   admin_password                  = "Aarti@431721"
   disable_password_authentication = false
