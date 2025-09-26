@@ -28,7 +28,7 @@ jobs:
         run: cd workstation && terraform init
 
       - name: Terraform Plan
-        run: terraform plan
+        run: cd workstation && terraform plan
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve
+        run: cd workstation && terraform apply -auto-approve
