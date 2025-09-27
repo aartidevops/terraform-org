@@ -1,4 +1,4 @@
-odule "component" {
+module "component" {
   for_each = var.component
   source = "./resources"
   component = each.value["name"]
